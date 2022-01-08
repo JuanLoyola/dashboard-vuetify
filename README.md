@@ -1,24 +1,17 @@
-# dashboard
-
-## Project setup
+# Dashboard DESKTOP VIEWS
+# Tools 
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+* HTML5
+* CSS3
+* Javascript
+* Vue.js
+* Vuetify
+* Echarts
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Live 
+<a href="https://dashboard-vuetify-loyola.netlify.app/" target="_blank">here</a>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Desktop preview:
+
+<img src="https://i.imgur.com/N4wf0ih.png" alt="desktop preview">
