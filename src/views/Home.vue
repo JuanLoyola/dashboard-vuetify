@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pulls
-Issues
-Marketplace
-Explore
- 
-@JuanLoyola 
-zakaria-29-dev
-/
-Vuejs-Vuetify-UI-Design-Sprint-Report-System
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Vuejs-Vuetify-UI-Design-Sprint-Report-System/src/views/Home.vue
-@zakaria-29-dev
-zakaria-29-dev first commit
-Latest commit 9ddcea8 6 days ago
- History
- 1 contributor
-515 lines (439 sloc)  13.6 KB
-   
 <template>
 <v-app id="inspire" :style="{background: $vuetify.theme.themes.dark.background}" >
   <SideBar />
@@ -536,16 +508,3 @@ option: {
 }
  
 </style>
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
