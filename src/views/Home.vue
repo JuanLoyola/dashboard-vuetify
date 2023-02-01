@@ -32,40 +32,34 @@
               <v-item v-slot="{ toggle }">
                 <v-card
                   :color="'#F683A0'"
-                  class="d-flex align-center items-center rounded-xl"
+                  class="d-flex align-center rounded-xl"
                   height="150"
                   @click="toggle"
                 >
-                  <v-row>
-                    <v-col cols="12" sm="6">
-                      <v-list-item three-line class="mt-10">
+                  <v-row justify="center" align="center" >
+                    <v-col cols="12" sm="5">
+                      <v-list-item three-line class="mt-5">
                         <v-list-item-content>
+                          <v-list-item-title
+                            class="headline"
+                            :class="'white--text'"
+                          >
+                            <strong>52</strong>
+                            <v-icon
+                              large
+                              :color="'white'"
+                              class="ml-3"
+                              >fas fa-chart-bar</v-icon
+                            >
+                          </v-list-item-title>
                           <v-list-item-subtitle
                             :class="'white--text'"
                             >Team velocity</v-list-item-subtitle
                           >
-                          <v-list-item-title
-                            class="headline mb-1"
-                            :class="'white--text'"
-                          >
-                            <strong>52</strong>
-                          </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
-                    <v-col>
-                      <v-list-item three-line class="mt-10">
-                        <v-list-item-content>
-                          <div class="mb-4">
-                            <v-icon
-                              large
-                              :color="'white'"
-                              >fas fa-chart-bar</v-icon
-                            >
-                          </div>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
+
                   </v-row>
                 </v-card>
               </v-item>
@@ -79,36 +73,30 @@
                   height="150"
                   @click="toggle"
                 >
-                  <v-row>
-                    <v-col cols="12" sm="6">
-                      <v-list-item three-line class="mt-10">
+                  <v-row justify="center" align="center" >
+                    <v-col cols="12" sm="5">
+                      <v-list-item three-line class="mt-5">
                         <v-list-item-content>
+                          <v-list-item-title
+                            class="headline"
+                            :class="'white--text'"
+                          >
+                            <strong>12</strong>
+                            <v-icon
+                              large
+                              :color="'white'"
+                              class="ml-3"
+                              >far fa-user</v-icon
+                            >
+                          </v-list-item-title>
                           <v-list-item-subtitle
                             :class="'white--text'"
                             >Team members</v-list-item-subtitle
                           >
-                          <v-list-item-title
-                            class="headline mb-1"
-                            :class="'white--text'"
-                          >
-                            <strong>12</strong>
-                          </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
-                    <v-col>
-                      <v-list-item three-line class="mt-10">
-                        <v-list-item-content>
-                          <div class="mb-4">
-                            <v-icon
-                              large
-                              :color="'white'"
-                              >far fa-user</v-icon
-                            >
-                          </div>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
+
                   </v-row>
                 </v-card>
               </v-item>
@@ -122,36 +110,30 @@
                   height="150"
                   @click="toggle"
                 >
-                  <v-row>
-                    <v-col cols="12" sm="6">
-                      <v-list-item three-line class="mt-10">
+                  <v-row justify="center" align="center" >
+                    <v-col cols="12" sm="5">
+                      <v-list-item three-line class="mt-5">
                         <v-list-item-content>
-                          <v-list-item-subtitle
-                            :class="'white--text'"
-                            >Spikes delivered</v-list-item-subtitle
-                          >
                           <v-list-item-title
-                            class="headline mb-1"
+                            class="headline"
                             :class="'white--text'"
                           >
                             <strong>23</strong>
-                          </v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                    <v-col>
-                      <v-list-item three-line class="mt-10">
-                        <v-list-item-content>
-                          <div class="mb-4">
                             <v-icon
                               large
                               :color="'white'"
-                              >fas fa-search</v-icon
+                              class="ml-3"
+                              >fa fa-search</v-icon
                             >
-                          </div>
+                          </v-list-item-title>
+                          <v-list-item-subtitle
+                            :class="'white--text'"
+                            >Spykes delivered</v-list-item-subtitle
+                          >
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
+
                   </v-row>
                 </v-card>
               </v-item>
