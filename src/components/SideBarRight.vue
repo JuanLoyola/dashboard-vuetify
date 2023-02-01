@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="py-6" app :style="{ background: '#3D366A' }" right width="290">
+  <v-navigation-drawer class="pt-6" app :style="{ background: '#3D366A' }" right width="290">
     <v-toolbar color="rgba(0,0,0,0)" flat>
       <v-toolbar-title class="white--text">Epics</v-toolbar-title>
       <v-spacer></v-spacer>

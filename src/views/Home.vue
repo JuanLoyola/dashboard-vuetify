@@ -6,7 +6,7 @@
     <SideBarRight />
     <v-container>
 
-      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-4">
+      <v-toolbar color="rgba(0,0,0,0)" flat class="pt-4">
         <v-btn-toggle v-model="toggle_exclusive" tile group color="#A4BEF3">
           <v-btn text>
             <v-icon class="white--text">fas fa-arrow-left</v-icon>
@@ -18,7 +18,8 @@
         <v-spacer></v-spacer>
         <v-btn color="#A4BEF3" rounded dark> finish sprint </v-btn>
       </v-toolbar>
-      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-6">
+
+      <v-toolbar color="rgba(0,0,0,0)" flat class="pt-6">
         <v-toolbar-title class="white--text">Sprint overview</v-toolbar-title>
         <v-btn color="#A4BEF3" text class="ml-5"> last sprint </v-btn>
       </v-toolbar>
@@ -31,8 +32,7 @@
               <v-item v-slot="{ toggle }">
                 <v-card
                   :color="'#F683A0'"
-                  class="d-flex align-center rounded-xl"
-                  dark
+                  class="d-flex align-center items-center rounded-xl"
                   height="150"
                   @click="toggle"
                 >
@@ -76,7 +76,6 @@
                 <v-card
                   :color="'#A57CED'"
                   class="d-flex align-center rounded-xl"
-                  dark
                   height="150"
                   @click="toggle"
                 >
@@ -120,7 +119,6 @@
                 <v-card
                   :color="'#F0C25B'"
                   class="d-flex align-center rounded-xl"
-                  dark
                   height="150"
                   @click="toggle"
                 >
@@ -163,7 +161,20 @@
         </v-container>
       </v-item-group>
 
-      <v-chart class="chart mt-2" :option="bar" autoresize />
+
+      <v-row justify="center" >
+        <v-col cols="5">
+          <v-card
+            :color="'#3D366A'"
+            class="d-flex align-center rounded-xl"
+            height="550"
+            width="550"
+            @click="toggle"
+          >
+            <v-chart class=""  :option="bar" />
+          </v-card>
+      </v-col>
+      </v-row>
 
     </v-container>
   </v-app>
@@ -245,4 +256,5 @@ export default {
   margin-left: -100px;
   margin-right: -100px;
 }
+
 </style>

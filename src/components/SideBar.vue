@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer class="py-6" v-model="drawer" app :style="{ background: '#3D366A' }" mini-variant mini-variant-width="80">
+  <v-navigation-drawer class="pt-6" v-model="drawer" app :style="{ background: '#3D366A' }" mini-variant mini-variant-width="80">
     <v-avatar class="d-block text-center mx-auto mt-4" size="40">
       <v-icon color="#A4BEF3" large>fab fa-atlassian</v-icon>
     </v-avatar>
@@ -13,7 +13,7 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
-    <div style="position: absolute; bottom: 50px; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;">
+    <div style="position: relative; bottom: 0px; left: 0; right: 0; text-align: center;">
       <v-btn icon :ripple="false">
         <v-badge bordered overlap color="red" dot>
           <v-icon class="white--text">far fa-bell</v-icon>
