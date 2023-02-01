@@ -1,134 +1,112 @@
 <template>
   <v-app
-    id="inspire"
-    :style="{ background: $vuetify.theme.themes.dark.background }"
+    :style="{ background: '#282844' }"
   >
     <SideBar />
     <SideBarRight />
     <v-container>
-      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-n4">
+
+      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-4">
         <v-btn-toggle v-model="toggle_exclusive" tile group color="#A4BEF3">
           <v-btn text>
-            <v-icon>fas fa-arrow-left</v-icon>
+            <v-icon class="white--text">fas fa-arrow-left</v-icon>
           </v-btn>
           <v-btn text>
-            <v-icon>fas fa-arrow-right</v-icon>
+            <v-icon class="white--text">fas fa-arrow-right</v-icon>
           </v-btn>
         </v-btn-toggle>
         <v-spacer></v-spacer>
         <v-btn color="#A4BEF3" rounded dark> finish sprint </v-btn>
       </v-toolbar>
-      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-n5">
-        <v-toolbar-title>Sprint overview</v-toolbar-title>
+      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-6">
+        <v-toolbar-title class="white--text">Sprint overview</v-toolbar-title>
         <v-btn color="#A4BEF3" text class="ml-5"> last sprint </v-btn>
       </v-toolbar>
-      <v-item-group mandatory class="mt-n4">
+
+      <v-item-group mandatory class="mt-5">
         <v-container>
           <v-row justify="center" class="space">
-            <v-col cols="12" md="2">
-              <v-item v-slot="{ active, toggle }">
+
+            <v-col cols="12" md="3">
+              <v-item v-slot="{ toggle }">
                 <v-card
-                  :color="active ? '#A4BEF3' : 'white'"
+                  :color="'#F683A0'"
                   class="d-flex align-center rounded-xl"
                   dark
-                  height="200"
+                  height="150"
                   @click="toggle"
                 >
                   <v-row>
-                    <v-col cols="12" sm="12">
+                    <v-col cols="12" sm="6">
                       <v-list-item three-line class="mt-10">
                         <v-list-item-content>
-                          <div class="mb-4">
-                            <v-icon
-                              x-large
-                              :color="active ? 'white' : '#A4BEF3'"
-                              >fas fa-chart-bar</v-icon
-                            >
-                          </div>
                           <v-list-item-subtitle
-                            :class="active ? 'white--text' : 'black--text'"
+                            :class="'white--text'"
                             >Team velocity</v-list-item-subtitle
                           >
                           <v-list-item-title
                             class="headline mb-1"
-                            :class="active ? 'white--text' : 'black--text'"
+                            :class="'white--text'"
                           >
                             <strong>52</strong>
                           </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-item v-slot="{ active, toggle }">
-                <v-card
-                  :color="active ? '#A4BEF3' : 'white'"
-                  class="d-flex align-center rounded-xl"
-                  dark
-                  height="200"
-                  @click="toggle"
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
+                    <v-col>
                       <v-list-item three-line class="mt-10">
                         <v-list-item-content>
                           <div class="mb-4">
                             <v-icon
-                              x-large
-                              :color="active ? 'white' : '#A4BEF3'"
-                              >far fa-user</v-icon
+                              large
+                              :color="'white'"
+                              >fas fa-chart-bar</v-icon
                             >
                           </div>
+                        </v-list-item-content>
+                      </v-list-item>
+                    </v-col>
+                  </v-row>
+                </v-card>
+              </v-item>
+            </v-col>
+
+            <v-col cols="12" md="3">
+              <v-item v-slot="{ toggle }">
+                <v-card
+                  :color="'#A57CED'"
+                  class="d-flex align-center rounded-xl"
+                  dark
+                  height="150"
+                  @click="toggle"
+                >
+                  <v-row>
+                    <v-col cols="12" sm="6">
+                      <v-list-item three-line class="mt-10">
+                        <v-list-item-content>
                           <v-list-item-subtitle
-                            :class="active ? 'white--text' : 'black--text'"
+                            :class="'white--text'"
                             >Team members</v-list-item-subtitle
                           >
                           <v-list-item-title
                             class="headline mb-1"
-                            :class="active ? 'white--text' : 'black--text'"
+                            :class="'white--text'"
                           >
                             <strong>12</strong>
                           </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-item v-slot="{ active, toggle }">
-                <v-card
-                  :color="active ? '#A4BEF3' : 'white'"
-                  class="d-flex align-center rounded-xl"
-                  dark
-                  height="200"
-                  @click="toggle"
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
+                    <v-col>
                       <v-list-item three-line class="mt-10">
                         <v-list-item-content>
                           <div class="mb-4">
                             <v-icon
-                              x-large
-                              :color="active ? 'white' : '#A4BEF3'"
-                              >fas fa-suitcase</v-icon
+                              large
+                              :color="'white'"
+                              >far fa-user</v-icon
                             >
                           </div>
-                          <v-list-item-subtitle
-                            :class="active ? 'white--text' : 'black--text'"
-                            >Tasks delivered</v-list-item-subtitle
-                          >
-                          <v-list-item-title
-                            class="headline mb-1"
-                            :class="active ? 'white--text' : 'black--text'"
-                          >
-                            <strong>23</strong>
-                          </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
@@ -136,73 +114,43 @@
                 </v-card>
               </v-item>
             </v-col>
-            <v-col cols="12" md="2">
-              <v-item v-slot="{ active, toggle }">
+
+            <v-col cols="12" md="3">
+              <v-item v-slot="{ toggle }">
                 <v-card
-                  :color="active ? '#A4BEF3' : 'white'"
+                  :color="'#F0C25B'"
                   class="d-flex align-center rounded-xl"
                   dark
-                  height="200"
+                  height="150"
                   @click="toggle"
                 >
                   <v-row>
-                    <v-col cols="12" sm="12">
+                    <v-col cols="12" sm="6">
                       <v-list-item three-line class="mt-10">
                         <v-list-item-content>
-                          <div class="mb-4">
-                            <v-icon
-                              x-large
-                              :color="active ? 'white' : '#A4BEF3'"
-                              >fas fa-search</v-icon
-                            >
-                          </div>
                           <v-list-item-subtitle
-                            :class="active ? 'white--text' : 'black--text'"
+                            :class="'white--text'"
                             >Spikes delivered</v-list-item-subtitle
                           >
                           <v-list-item-title
                             class="headline mb-1"
-                            :class="active ? 'white--text' : 'black--text'"
+                            :class="'white--text'"
                           >
                             <strong>23</strong>
                           </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-            <v-col cols="12" md="2">
-              <v-item v-slot="{ active, toggle }">
-                <v-card
-                  :color="active ? '#A4BEF3' : 'white'"
-                  class="d-flex align-center rounded-xl"
-                  dark
-                  height="200"
-                  @click="toggle"
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
+                    <v-col>
                       <v-list-item three-line class="mt-10">
                         <v-list-item-content>
                           <div class="mb-4">
                             <v-icon
-                              x-large
-                              :color="active ? 'white' : '#A4BEF3'"
-                              >fas fa-globe-africa
-                            </v-icon>
+                              large
+                              :color="'white'"
+                              >fas fa-search</v-icon
+                            >
                           </div>
-                          <v-list-item-subtitle
-                            :class="active ? 'white--text' : 'black--text'"
-                            >News events</v-list-item-subtitle
-                          >
-                          <v-list-item-title
-                            class="headline mb-1"
-                            :class="active ? 'white--text' : 'black--text'"
-                          >
-                            <strong>15</strong>
-                          </v-list-item-title>
                         </v-list-item-content>
                       </v-list-item>
                     </v-col>
@@ -210,153 +158,13 @@
                 </v-card>
               </v-item>
             </v-col>
+
           </v-row>
         </v-container>
       </v-item-group>
-      <v-row class="mt-n6">
-        <v-col cols="12" sm="7">
-          <v-chart class="chart mt-2" :option="option" />
-        </v-col>
-        <v-col cols="12" md="5" sm="12">
-          <v-toolbar color="rgba(0,0,0,0)" flat class="mt-n2">
-            <v-toolbar-title>Sprint stories</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn rounded small> See All </v-btn>
-          </v-toolbar>
-          <v-simple-table class="grey lighten-3">
-            <template v-slot:default>
-              <tbody>
-                <tr v-for="item in orders" :key="item.name">
-                  <td>{{ item.id }}</td>
-                  <td>{{ item.title }}</td>
-                  <td>{{ item.state }}</td>
-                  <td>{{ item.count }}</td>
-                  <td>
-                    <v-icon small>{{ item.icon }}</v-icon>
-                  </td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table>
-        </v-col>
-      </v-row>
-      <v-toolbar color="rgba(0,0,0,0)" flat class="mt-n8">
-        <v-toolbar-title>Team members</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn rounded small> Add member </v-btn>
-      </v-toolbar>
-      <v-card class="rounded-lg">
-        <v-row>
-          <v-col cols="12" sm="3">
-            <v-list subheader two-line>
-              <v-list-item>
-                <v-badge
-                  bordered
-                  bottom
-                  color="#A4BEF3"
-                  dot
-                  offset-x="28"
-                  offset-y="22"
-                >
-                  <v-list-item-avatar>
-                    <v-avatar size="40">
-                      <v-img
-                        src="https://cdn.vuetifyjs.com/images/lists/2.jpg"
-                      ></v-img>
-                    </v-avatar>
-                  </v-list-item-avatar>
-                </v-badge>
-                <v-list-item-content>
-                  <v-list-item-title>Juan</v-list-item-title>
 
-                  <v-list-item-subtitle>32 Story point</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-col>
-          <v-col cols="12" sm="3">
-            <v-list subheader two-line>
-              <v-list-item>
-                <v-badge
-                  bordered
-                  bottom
-                  color="#A4BEF3"
-                  dot
-                  offset-x="28"
-                  offset-y="22"
-                >
-                  <v-list-item-avatar>
-                    <v-avatar size="40">
-                      <v-img
-                        src="https://cdn.vuetifyjs.com/images/lists/1.jpg"
-                      ></v-img>
-                    </v-avatar>
-                  </v-list-item-avatar>
-                </v-badge>
-                <v-list-item-content>
-                  <v-list-item-title>Jhony</v-list-item-title>
+      <v-chart class="chart mt-2" :option="bar" autoresize />
 
-                  <v-list-item-subtitle>8 Story point</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-col>
-          <v-col cols="12" sm="3">
-            <v-list subheader two-line>
-              <v-list-item>
-                <v-badge
-                  bordered
-                  bottom
-                  color="#A4BEF3"
-                  dot
-                  offset-x="28"
-                  offset-y="22"
-                >
-                  <v-list-item-avatar>
-                    <v-avatar size="40">
-                      <v-img
-                        src="https://cdn.vuetifyjs.com/images/lists/3.jpg"
-                      ></v-img>
-                    </v-avatar>
-                  </v-list-item-avatar>
-                </v-badge>
-                <v-list-item-content>
-                  <v-list-item-title>Mimi</v-list-item-title>
-
-                  <v-list-item-subtitle>32 Story point</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-col>
-          <v-col cols="12" sm="3">
-            <v-list subheader two-line>
-              <v-list-item>
-                <v-badge
-                  bordered
-                  bottom
-                  color="#A4BEF3"
-                  dot
-                  offset-x="28"
-                  offset-y="22"
-                >
-                  <v-list-item-avatar>
-                    <v-avatar size="40">
-                      <v-img
-                        src="https://cdn.vuetifyjs.com/images/lists/4.jpg"
-                      ></v-img>
-                    </v-avatar>
-                  </v-list-item-avatar>
-                </v-badge>
-                <v-list-item-content>
-                  <v-list-item-title>Selia</v-list-item-title>
-
-                  <v-list-item-subtitle>10 Story point</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-col>
-        </v-row>
-      </v-card>
     </v-container>
   </v-app>
 </template>
@@ -367,7 +175,7 @@ import SideBarRight from "../components/SideBarRight";
 
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
-import { PieChart } from "echarts/charts";
+import { BarChart } from "echarts/charts";
 import {
   TitleComponent,
   TooltipComponent,
@@ -376,7 +184,7 @@ import {
 import VChart, { THEME_KEY } from "vue-echarts";
 use([
   CanvasRenderer,
-  PieChart,
+  BarChart,
   TitleComponent,
   TooltipComponent,
   LegendComponent,
@@ -385,70 +193,41 @@ export default {
   name: "Home",
   data: () => ({
     toggle_exclusive: 1,
-    orders: [
-      {
-        id: "P42",
-        title: "Onboarding",
-        state: "Delivered",
-        count: 3,
-        icon: "fas fa-ellipsis-h",
-      },
-      {
-        id: "P32",
-        title: "User profile",
-        state: "Delivered",
-        count: 8,
-        icon: "fas fa-ellipsis-h",
-      },
-      {
-        id: "P56",
-        title: "Landing page",
-        state: "Approved",
-        count: 12,
-        icon: "fas fa-ellipsis-h",
-      },
-      {
-        id: "P36",
-        title: "Settings",
-        state: "Approved",
-        count: 9,
-        icon: "fas fa-ellipsis-h",
-      },
-    ],
-
-    option: {
-      title: {
-        text: "Burnsown chart",
-        left: "left",
-      },
-      tooltip: {
-        trigger: "item",
-        formatter: "{a} <br/>{b} : {c} ({d}%)",
-      },
-
-      series: [
-        {
-          name: "Traffic Sources",
-          type: "pie",
-          radius: "55%",
-          center: ["45%", "50%"],
-          data: [
-            { value: 335, name: "E-commerce" },
-            { value: 310, name: "Integrations" },
-            { value: 234, name: "MongoDB" },
-            { value: 135, name: "RFM Module" },
-            { value: 1548, name: "UX-UI" },
-          ],
-          emphasis: {
-            itemStyle: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: "rgba(0, 0, 0, 0)",
-            },
+    bar : {
+      dataset: {
+        dimensions: ["Product", "2015", "2016", "2017"],
+        source: [
+          {
+            Product: "Team velocity",
+            2015: 1113,
+            2016: 715,
+            2017: 857
           },
+          {
+            Product: "Team members",
+            2015: 834,
+            2016: 635,
+            2017: 425,
+          },
+          {
+            Product: "Spikes delivered",
+            2015: 956,
+            2016: 1064,
+            2017: 723
+          }
+        ],
+      },
+      xAxis: { type: "category" },
+      yAxis: {},
+      series: [{ type: "bar" }, { type: "bar" }, { type: "bar" }],
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: "rgba(255, 255, 255, .6)",
         },
-      ],
-    },
+      },
+    }
   }),
   components: {
     SideBar,
